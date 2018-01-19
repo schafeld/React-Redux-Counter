@@ -1,3 +1,5 @@
+This Redux counter was inspired by [this tutorial](https://daveceddia.com/how-does-redux-work/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
