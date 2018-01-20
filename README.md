@@ -1,11 +1,11 @@
 This Redux counter was inspired by [this tutorial](https://daveceddia.com/how-does-redux-work/)
 
 ## Quick installation
-Download or clone project.
-cd into project folder.
-run `npm install`
-run `npm start`
-browse to `http://localhost:3000/`
+- Download or clone project.
+- cd into project folder.
+- run `npm install`
+- run `npm start`
+- browse to `http://localhost:3000/`
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
