@@ -1,26 +1,33 @@
-import React from 'react';
-import { render } from 'react-dom';
-import Hello from './Hello';
-import Counter from './Counter';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import style from './style.css';
+import React from 'react'
+import { render } from 'react-dom'
+import Hello from './Hello'
+import Counter from './Counter'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import style from './style.css'
 
-/*
-const styles = {
-  fontFamily: 'sans-serif',
-  textAlign: 'center',
-};
-*/
-
-function reducer() {
-  // tbd
-  return {
-    count: 0
-  };
+const initialState = {
+  count: 0
 }
 
-const store = createStore(reducer);
+function reducer(state = initialState, action) {
+  // console.log(action)
+
+  switch (action.type) {
+    case 'INCREMENT':
+      return {
+        count: state.count + 1
+      };
+    case 'DECREMENT':
+      return {
+        count: state.count - 1
+      };
+    default:
+      return state;
+  }
+}
+
+const store = createStore(reducer)
 
 const App = () => (
   <Provider store={store}>
@@ -30,6 +37,6 @@ const App = () => (
       <Counter />
     </div>
   </Provider>
-);
+)
 
-render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById('root'))
